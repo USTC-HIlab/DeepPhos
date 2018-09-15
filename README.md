@@ -15,7 +15,7 @@ test data.csv
 
 The input file is an csv file, which includes ptm proteinName, postion, sequences and labels
 
-predict for your test data
+Predict for your test data
 =========
 If you want to use the model to predict your test data, you must prepared the test data as an csv file, the firest column is       
 proteinName,the seconde col: postion, the third col: sequences 
@@ -33,7 +33,7 @@ The results is an txt file,like:
 You can change the corresponding parameters in  main function prdict.py to choose to use the model to predict for general or kinase 
 prediction
 
-train with your own data
+Train with your own data
 =====
 If you want to train your own network,your input file is an csv fie, while contains 4 columns:
 label, proteinName, postion, sequence
