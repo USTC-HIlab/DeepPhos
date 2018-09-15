@@ -22,7 +22,7 @@ proteinName,the seconde col: postion, the third col: sequences
 
 The you can run the predict.py 
 
-    The results is an txt file,like:
+The results is an txt file,like:
      "Q99440"	"3"	"0.12992426753"
     "Q99440"	"13"	"0.0967529118061"
     "Q99440"	"19"	"0.101900868118"
