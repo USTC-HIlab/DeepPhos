@@ -8,6 +8,7 @@ Requirement
 =========
     keras==2.0.0
     numpy>=1.8.0
+    backend==tensorflow
 
 Related data information need to first load
 =========
