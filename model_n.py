@@ -78,11 +78,11 @@ def model_net(X_train1, X_train2, X_train3, y_train,
         for num in range(len(model2.layers) - 1):
             model.layers[num].set_weights(model2.layers[num].get_weights())
 
-
-    model.fit([X_train1, X_train2, X_train3], y_train, batch_size=nb_batch_size,
-                       # validation_data=([X_val1, X_val2, X_val3, y_val),
-                       # validation_split=0.1,
-                       epochs= nb_epoch, shuffle=True, verbose=1)
+    if nb_epoch > 0:
+      model.fit([X_train1, X_train2, X_train3], y_train, batch_size=nb_batch_size,
+                         # validation_data=([X_val1, X_val2, X_val3, y_val),
+                         # validation_split=0.1,
+                         epochs= nb_epoch, shuffle=True, verbose=1)
 
 
     return model
