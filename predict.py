@@ -46,11 +46,11 @@ def predict_for_deepphos(train_file_name,sites,predictFrame = 'general',
     [X_test2,_,_,_] = getMatrixInput(train_file_name, sites, win2)
     [X_test3,_,_,_]  = getMatrixInput(train_file_name, sites, win3)
 
-    print X_test1.shape
-    print len(position)
+#     print X_test1.shape
+#     print len(position)
 
     from methods.model_n import model_net
-    model = model_net(X_test1, X_test2, X_test3, y_test,nb_epoch = 1)
+    model = model_net(X_test1, X_test2, X_test3, y_test,nb_epoch = 0)
 
     #load model weight
     if predictFrame == 'general':
@@ -64,7 +64,7 @@ def predict_for_deepphos(train_file_name,sites,predictFrame = 'general',
     if predictFrame == 'kinase':
         outputfile = 'kinase_{:s}_{:s}'.format(hierarchy, kinase)
         model_weight = './models/model_{:s}_{:s}.h5'.format(hierarchy, kinase)
-    print model_weight
+#     print model_weight
     model.load_weights(model_weight)
     predictions_t = model.predict([X_test1, X_test2, X_test3])
     results_ST = np.column_stack((ids, position,predictions_t[:, 1]))
